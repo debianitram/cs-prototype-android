@@ -19,7 +19,7 @@ class CSApi(object):
 
     def check_user(self):
         try:
-            r = requests.post(URL_SERVICE + 'ping/', auth=self.auth)
+            r = requests.get(URL_SERVICE + 'ping/', auth=self.auth)
             r.raise_for_status()
             return (True, '')
 
